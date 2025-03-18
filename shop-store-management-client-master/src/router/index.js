@@ -143,7 +143,7 @@ export default new Router({
     {
       path: "/consult",
       component: ConsultManagement,
-      name: "咨询管理",
+      name: "公告管理",
       iconCls: "iconfont icon-jinhuodan",
       hidden: false,
     },

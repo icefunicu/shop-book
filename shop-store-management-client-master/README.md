@@ -1,4 +1,4 @@
-# 网上书店管理系统-前端
+# 校园二手书籍交易平台-前端
 
 基于 `Vue`, `Element` 的网上书店管理后台。
 
@@ -9,7 +9,7 @@
 
 网上书店-后端 [链接](https://github.com/pwx123/shop-store-server)
 
-网上书店管理系统-后端 [链接](https://github.com/pwx123/shop-store-management-server)
+校园二手书籍交易平台-后端 [链接](https://github.com/pwx123/shop-store-management-server)
 
 ## 实现功能
 

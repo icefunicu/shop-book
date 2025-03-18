@@ -75,7 +75,7 @@ import { handleError } from "./../../util/util";
 export default {
   data() {
     return {
-      sysName: "网上书店管理系统",
+      sysName: "校园二手书籍交易平台",
       defaultAvatar: this.$basePath + "/images/admin/default.png",
       showRouterView: true,
       audioTips: true,
@@ -287,9 +287,8 @@ export default {
       font-weight 600
       padding-left 20px
       border-color rgba(238, 241, 146, 0.3)
-      width 210px
-      border-right-width 1px
-      border-right-style solid
+      width 260px
+
       cursor pointer
 
   .main
