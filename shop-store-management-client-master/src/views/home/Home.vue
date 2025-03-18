@@ -101,6 +101,13 @@ export default {
   computed: {
     navRouter() {
       return this.$router.options.routes.filter(router => {
+        if (this.userInfo.usertype === 2) {
+          return !router.hidden;
+        }
+        // 如果不是管理员，隐藏用户管理和系统设置
+        if (router.name === "用户管理" || router.name === "系统管理") {
+          return false;
+        }
         return !router.hidden;
       });
     },

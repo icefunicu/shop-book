@@ -103,8 +103,23 @@ export default new Router({
   {
     path: "/index",
     component: Home,
+    name: "店铺管理",
+    iconCls: "iconfont icon-home",
+    children: [{
+      path: "/index/shopManagement",
+      component: ShopManagement,
+      name: "店铺管理"
+    }, {
+      path: "/index/shopOptionRecord",
+      component: ShopOptionRecord,
+      name: "店铺操作日志"
+    },]
+  },
+  {
+    path: "/index",
+    component: Home,
     name: "进货管理",
-    iconCls: "iconfont icon-jinhuodan",
+    iconCls: "iconfont icon-home",
     children: [{
       path: "/index/stockPurchase",
       component: StockPurchase,
@@ -124,14 +139,6 @@ export default new Router({
       path: "/index/adminInfo",
       component: AdminInfo,
       name: "个人信息修改"
-    }, {
-      path: "/index/shopManagement",
-      component: ShopManagement,
-      name: "店铺管理"
-    }, {
-      path: "/index/shopOptionRecord",
-      component: ShopOptionRecord,
-      name: "店铺操作日志"
     },
     {
       path: "/message",
