@@ -55,14 +55,14 @@ class shopUserController {
       // 如果有usertype字段，说明是adminuser表，如果没有说明是shopuser表
       if (req.body.usertype == 1) {
         await adminUserModel.updateById({
-          name: req.body.name,
+
           email: req.body.email,
           nickname : req.body.nickname
         }, req.body.id);
       } else {
         await shopUserModel.update({
           id: req.body.id,
-          name: req.body.name,
+
           email: req.body.email,
           nickname : req.body.nickname
         });

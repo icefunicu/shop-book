@@ -226,6 +226,12 @@ class adminUserController {
       logger.error(error);
     }
   }
+  // 资讯查询
+
+
+
+
+
 }
 
 module.exports = adminUserController;
