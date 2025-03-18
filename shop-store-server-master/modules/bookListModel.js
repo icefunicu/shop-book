@@ -43,7 +43,7 @@ class bookListModel {
    * @memberof bookListModel
    */
   static async getGoodByClassifyId(id) {
-    return await sequelize.query("SELECT * FROM `shop_book_list` WHERE FIND_IN_SET(" + id + ", classify) AND status=0 AND isSell=1 limit 8", {type: sequelize.QueryTypes.SELECT});
+    return await sequelize.query("SELECT * FROM `shop_book_list` WHERE FIND_IN_SET(" + id + ", classify) AND status=0 AND isSell=1 limit 8", { type: sequelize.QueryTypes.SELECT });
   }
 
   /**
@@ -54,30 +54,18 @@ class bookListModel {
    * @memberof bookListModel
    */
   static async getHotGood(all) {
-    let time = new Date(new Date(new Date().toLocaleDateString()).getTime());
-    time.setDate(1);
-    let obj = {};
-    if (!all) {
-      obj.limit = 3;
-    }
     return shopSubOrderListSchema.findAll({
-      attributes: [[sequelize.fn("COUNT", sequelize.col("id")), "bookCount"],
+      attributes: [
+        [sequelize.fn("COUNT", sequelize.col("id")), "bookCount"],
         ["bookId", "id"],
         ["bookName", "name"],
         ["bookImageUrl", "imageUrl"],
         ["bookPrice", "price"],
         ["bookSalePrice", "salePrice"]
       ],
-      where: {
-        createdAt: {
-          [Op.gt]: time,
-        }
-      },
       group: "bookId",
-      order: [
-        [[sequelize.literal("bookCount"), "DESC"]]
-      ],
-      ...obj
+      order: [[sequelize.literal("bookCount"), "DESC"]],
+      limit: all ? undefined : 3, // 是否限制返回数量
     });
   }
 
@@ -135,7 +123,7 @@ class bookListModel {
    */
   static async getBookInfoById(id) {
     return bookListSchema.findOne({
-      attributes: {exclude: ["status", "stockPrice", "createdAt", "updatedAt"]},
+      attributes: { exclude: ["status", "stockPrice", "createdAt", "updatedAt"] },
       where: {
         id
       }
@@ -150,7 +138,7 @@ class bookListModel {
    */
   static async getBookInfoByIds(idsArr) {
     return bookListSchema.findAll({
-      attributes: {exclude: ["status", "stockPrice", "createdAt", "updatedAt"]},
+      attributes: { exclude: ["status", "stockPrice", "createdAt", "updatedAt"] },
       where: {
         id: {
           [Op.in]: idsArr
