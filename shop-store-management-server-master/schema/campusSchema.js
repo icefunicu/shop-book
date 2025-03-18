@@ -1,6 +1,6 @@
 const moment = require("moment");
 module.exports = function (sequelize, DataTypes) {
-    return sequelize.define("campus", {
+    return sequelize.define("campus_information", {
         id: {
             type: DataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
