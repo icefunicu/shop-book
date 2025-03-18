@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <van-nav-bar title="校园二手书籍交易平台" />
     <van-search
       @search="onSearch"
       placeholder="请输入搜索关键词"
@@ -38,7 +39,7 @@
           class="sale-item"
           v-for="item in hotGoods"
         >
-          <img :src="item.imageUrl" alt="" />
+          <img :src="item.imageUrl" alt="" class="img" />
           <div class="sale-name">{{ item.name }}</div>
           <div class="sale-price">{{ item.salePrice | money }}</div>
         </li>
@@ -169,10 +170,26 @@ export default {
       searchValue: "",
       indexPage: 1,
       images: [
-        { id: 1, url: this.baseUrl + "/images/shop/swipe/swipe-1.jpg" },
-        { id: 2, url: this.baseUrl + "/images/shop/swipe/swipe-2.jpg" },
-        { id: 3, url: this.baseUrl + "/images/shop/swipe/swipe-3.jpg" },
-        { id: 4, url: this.baseUrl + "/images/shop/swipe/swipe-4.jpg" }
+        {
+          id: 1,
+          url:
+            "https://gw.alicdn.com/imgextra/O1CN018PpodW1vTHflImAHb_!!6000000006173-2-yinhe.png_.webp"
+        },
+        {
+          id: 2,
+          url:
+            "https://m.media-amazon.com/images/I/51ikSbyRU6L._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+          id: 3,
+          url:
+            "https://www.book5.cc/wp-content/uploads/2024/01/photo_2022-11-14_23-50-05.jpg"
+        },
+        {
+          id: 4,
+          url:
+            "https://deerlib.s3.eu-west-3.amazonaws.com/book/9787559663283/9787559663283-pc-1.jpg"
+        }
       ]
     };
   },
@@ -222,6 +239,10 @@ export default {
   .van-search {
     border-bottom 1px solid #dedede
   }
+  .image {
+    width 100%
+    height 100%
+  }
 }
 
 .home-swipe {
@@ -262,6 +283,8 @@ export default {
 
     img {
       width 100%
+      height 100%
+      object-fit contain
     }
   }
 }
