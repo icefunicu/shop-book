@@ -285,9 +285,9 @@ export default {
     handleToggleStatus(scope) {
       const { id, status } = scope.row;
       const newStatus = status === 1 ? 0 : 1;
-      const statusText = newStatus === 1 ? '启用' : '禁用';
-      const data = status === 1 ? 0 : 1;
-      editConsult({ id, data })
+      
+      const statusText = status === 1 ? '启用' : '禁用';
+      editConsult({ id, status: newStatus })
         .then(res => {
           if (res.errorCode === 200) {
             this.$message({
