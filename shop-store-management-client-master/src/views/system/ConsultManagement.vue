@@ -2,7 +2,7 @@
   <div>
     <!-- 添加新增按钮 -->
     <div class="toolbar">
-      <el-button type="primary" @click="handleAddConsult">新增资讯‘</el-button>
+      <el-button type="primary" @click="handleAddConsult">新增资讯</el-button>
     </div>
     <el-table :data="tableData" style="width: 100%">
       <el-table-column
