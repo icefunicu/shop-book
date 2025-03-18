@@ -1,7 +1,7 @@
 // 编码
 const ENCODING = "utf-8";
 // 服务器目录
-const SERVER_DIR = "D:\\School\\Demo_pakge\\Work\\shop-store-management-server-master";
+const SERVER_DIR = "E:\\test\\aaaaaaaaaaaaaaaa\\test\\shop-book\\shop-store-management-server-master";
 // 图书下载模板文件名
 const BOOK_NAME = "批量上传图书.xlsx";
 // 图书下载模板位置 
