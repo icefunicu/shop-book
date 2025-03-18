@@ -2,10 +2,10 @@ var mysql = require("mysql");
 var axios = require("axios");
 var Decimal = require("decimal.js");
 var connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "shop_store_management"
+  host: "8.141.89.85",
+  user: "shop",
+  password: "123456",
+  database: "shop"
 });
 connection.connect();
 
