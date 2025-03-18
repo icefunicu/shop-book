@@ -1,7 +1,7 @@
 // 编码
 const ENCODING = "utf-8";
 // 服务器目录
-const SERVER_DIR = "D:\\School\\Demo_pakge\\Work\\shop-store-server-master";
+const SERVER_DIR = "./";
 // 图书下载模板文件名
 const BOOK_NAME = "批量上传图书.xlsx";
 // 图书下载模板位置
@@ -21,7 +21,7 @@ const KEEP_EXTENSIONS = true;
 // 最大上传大小
 const MAX_FILESIZE = 1024 * 1024 * 20;
 // 服务器URL
-const SERVER_URL = "http://localhost:3001";
+const SERVER_URL = "http://localhost:8080";
 // 图书图片地址
 const BOOK_IMG_URL = "/images/book/";
 // 管理员头像地址
@@ -29,7 +29,7 @@ const ADMIN_AVATAR_URL = "/images/admin/";
 // 用户头像地址
 const USER_AVATAR_URL = "/images/user/";
 // 管理端服务器地址
-const MANAGEMENT_SERVER = "http://127.0.0.1:3000";
+const MANAGEMENT_SERVER = "http://127.0.0.1:8080";
 
 module.exports = {
   ENCODING,
