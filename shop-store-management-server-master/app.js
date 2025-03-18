@@ -59,6 +59,8 @@ app.use("/shop", shopRouter);
 app.use("/order", orderRouter);
 app.use("/api", apiRouter);
 app.use("/message", require("./routes/message"));
+app.use("/campus", require("./routes/campus"));
+
 
 //404 handler
 app.use(function (req, res, next) {
