@@ -20,6 +20,7 @@ const AdminInfo = () => import( /* webpackChunkName: "AdminInfo" */ "@/views/sys
 const ShopManagement = () => import( /* webpackChunkName: "ShopManagement" */ "@/views/system/ShopManagement");
 const ShopOptionRecord = () => import( /* webpackChunkName: "ShopOptionRecord" */ "@/views/system/ShopOptionRecord");
 const LeaveMessage = () => import( /* webpackChunkName: "LeaveMessage" */ "@/views/system/LeaveMessage");
+const ConsultManagement = () => import( /* webpackChunkName: "ConsultManagement" */ "@/views/system/ConsultManagement");
 Vue.use(Router);
 
 
@@ -136,6 +137,13 @@ export default new Router({
       path: "/message",
       component: LeaveMessage,
       name: "留言管理",
+      iconCls: "iconfont icon-jinhuodan",
+      hidden: false,
+    },
+    {
+      path: "/consult",
+      component: ConsultManagement,
+      name: "咨询管理",
       iconCls: "iconfont icon-jinhuodan",
       hidden: false,
     },
