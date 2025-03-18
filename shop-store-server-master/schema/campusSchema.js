@@ -1,6 +1,6 @@
 const moment = require("moment");
 module.exports = function (sequelize, DataTypes) {
-    return sequelize.define("campus", {
+    return sequelize.define("campus_information", {
         id: {
             type: DataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
@@ -28,20 +28,16 @@ module.exports = function (sequelize, DataTypes) {
             field: 'publish_time',
             comment: '发布时间'
         },
-        author_id: {
-            type: DataTypes.INTEGER.UNSIGNED,
-            allowNull: false,
-            field: 'author_id',
-            comment: '发布人ID'
-        },
         create_time: {
             type: DataTypes.DATE,
+            defaultValue: DataTypes.NOW,
             get() {
                 return moment(this.getDataValue("create_time")).format("YYYY-MM-DD HH:mm:ss");
             }
         },
         update_time: {
             type: DataTypes.DATE,
+            defaultValue: DataTypes.NOW,
             get() {
                 return moment(this.getDataValue("update_time")).format("YYYY-MM-DD HH:mm:ss");
             }
