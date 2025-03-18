@@ -287,7 +287,7 @@ export default {
       const newStatus = status === 1 ? 0 : 1;
       const statusText = newStatus === 1 ? '启用' : '禁用';
       const data = status === 1 ? 0 : 1;
-      editConsult({ id, status })
+      editConsult({ id, data })
         .then(res => {
           if (res.errorCode === 200) {
             this.$message({
