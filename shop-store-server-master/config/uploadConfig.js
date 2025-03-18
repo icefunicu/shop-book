@@ -21,7 +21,7 @@ const KEEP_EXTENSIONS = true;
 // 最大上传大小
 const MAX_FILESIZE = 1024 * 1024 * 20;
 // 服务器URL
-const SERVER_URL = "http://localhost:8080";
+const SERVER_URL = "http://127.0.0.1:8080";
 // 图书图片地址
 const BOOK_IMG_URL = "/images/book/";
 // 管理员头像地址
