@@ -2,7 +2,7 @@
   <div>
     <!-- 添加新增按钮 -->
     <div class="toolbar">
-      <el-button type="primary" @click="handleAddConsult">新增咨询</el-button>
+      <el-button type="primary" @click="handleAddConsult">新增资讯‘</el-button>
     </div>
     <el-table :data="tableData" style="width: 100%">
       <el-table-column
@@ -51,7 +51,7 @@
       <el-table-column label="状态" style="width: 100px;" align="center">
         <template slot-scope="scope">
           <el-tag :type="scope.row.status === 1 ? 'success' : 'info'">
-            {{ scope.row.status === 1 ? '启用' : '禁用' }}
+            {{ scope.row.status === 1 ? "启用" : "禁用" }}
           </el-tag>
         </template>
       </el-table-column>
@@ -63,12 +63,12 @@
             @click="handleEditConsult(scope)"
             >编辑</el-button
           >
-          <el-button 
-            :type="scope.row.status === 1 ? 'warning' : 'success'" 
-            size="mini" 
+          <el-button
+            :type="scope.row.status === 1 ? 'warning' : 'success'"
+            size="mini"
             @click="handleToggleStatus(scope)"
           >
-            {{ scope.row.status === 1 ? '禁用' : '启用' }}
+            {{ scope.row.status === 1 ? "禁用" : "启用" }}
           </el-button>
           <el-button
             type="danger"
@@ -101,12 +101,21 @@
       width="40%"
       :before-close="handleEditClose"
     >
-      <el-form :model="editForm" :rules="formRules" ref="editForm" label-width="80px">
+      <el-form
+        :model="editForm"
+        :rules="formRules"
+        ref="editForm"
+        label-width="80px"
+      >
         <el-form-item label="标题" prop="title">
           <el-input v-model="editForm.title"></el-input>
         </el-form-item>
         <el-form-item label="内容" prop="content">
-          <el-input type="textarea" :rows="5" v-model="editForm.content"></el-input>
+          <el-input
+            type="textarea"
+            :rows="5"
+            v-model="editForm.content"
+          ></el-input>
         </el-form-item>
       </el-form>
       <span slot="footer" class="dialog-footer">
@@ -115,19 +124,28 @@
       </span>
     </el-dialog>
 
-    <!-- 添加新增咨询对话框 -->
+    <!-- 添加新增资讯对话框 -->
     <el-dialog
-      title="新增咨询"
+      title="新增资讯"
       :visible.sync="addDialogVisible"
       width="40%"
       :before-close="handleAddClose"
     >
-      <el-form :model="addForm" :rules="formRules" ref="addForm" label-width="80px">
+      <el-form
+        :model="addForm"
+        :rules="formRules"
+        ref="addForm"
+        label-width="80px"
+      >
         <el-form-item label="标题" prop="title">
           <el-input v-model="addForm.title"></el-input>
         </el-form-item>
         <el-form-item label="内容" prop="content">
-          <el-input type="textarea" :rows="5" v-model="addForm.content"></el-input>
+          <el-input
+            type="textarea"
+            :rows="5"
+            v-model="addForm.content"
+          ></el-input>
         </el-form-item>
       </el-form>
       <span slot="footer" class="dialog-footer">
@@ -139,7 +157,12 @@
 </template>
 
 <script>
-import { getConsultList, deleteConsult, editConsult, addConsult} from "@/api/consult.js";
+import {
+  getConsultList,
+  deleteConsult,
+  editConsult,
+  addConsult
+} from "@/api/consult.js";
 export default {
   created() {
     this.init();
@@ -183,12 +206,12 @@ export default {
     },
     // 编辑对话框关闭处理
     handleEditClose(done) {
-      this.$refs['editForm'].resetFields();
+      this.$refs["editForm"].resetFields();
       done();
     },
     // 提交编辑
     submitEdit() {
-      this.$refs['editForm'].validate((valid) => {
+      this.$refs["editForm"].validate(valid => {
         if (valid) {
           editConsult({
             id: this.editForm.id,
@@ -239,22 +262,22 @@ export default {
         }
       } catch (error) {}
     },
-    // 添加新增咨询方法
+    // 添加新增资讯方法
     handleAddConsult() {
       this.addDialogVisible = true;
       // 重置表单
       this.$nextTick(() => {
-        this.$refs['addForm'] && this.$refs['addForm'].resetFields();
+        this.$refs["addForm"] && this.$refs["addForm"].resetFields();
       });
     },
     // 新增表单关闭处理
     handleAddClose(done) {
-      this.$refs['addForm'].resetFields();
+      this.$refs["addForm"].resetFields();
       done();
     },
-    // 提交新增咨询
+    // 提交新增资讯
     submitAdd() {
-      this.$refs['addForm'].validate((valid) => {
+      this.$refs["addForm"].validate(valid => {
         if (valid) {
           addConsult(this.addForm)
             .then(res => {
@@ -285,8 +308,8 @@ export default {
     handleToggleStatus(scope) {
       const { id, status } = scope.row;
       const newStatus = status === 1 ? 0 : 1;
-      
-      const statusText = status === 1 ? '启用' : '禁用';
+
+      const statusText = status === 1 ? "启用" : "禁用";
       editConsult({ id, status: newStatus })
         .then(res => {
           if (res.errorCode === 200) {
@@ -311,20 +334,18 @@ export default {
             type: "error"
           });
         });
-    },
+    }
   },
   data() {
     // 创建通用的表单验证规则
     const formRules = {
       title: [
-        { required: true, message: '请输入标题', trigger: 'blur' },
-        { min: 1, max: 50, message: '长度在 1 到 50 个字符', trigger: 'blur' }
+        { required: true, message: "请输入标题", trigger: "blur" },
+        { min: 1, max: 50, message: "长度在 1 到 50 个字符", trigger: "blur" }
       ],
-      content: [
-        { required: true, message: '请输入内容', trigger: 'blur' }
-      ]
+      content: [{ required: true, message: "请输入内容", trigger: "blur" }]
     };
-    
+
     return {
       tableData: [
         {
@@ -354,18 +375,18 @@ export default {
       // 添加编辑相关数据
       editDialogVisible: false,
       editForm: {
-        id: '',
-        title: '',
-        content: ''
+        id: "",
+        title: "",
+        content: ""
       },
       // 添加新增相关数据
       addDialogVisible: false,
       addForm: {
-        title: '',
-        content: ''
+        title: "",
+        content: ""
       },
       // 使用通用的表单验证规则
-      formRules,
+      formRules
     };
   }
 };
