@@ -46,6 +46,16 @@ class campusModel {
             order: [['create_time', 'DESC']]
         });
     }
+    /**
+     * 获取校园资讯列表 
+     * @returns {Promise} - 返回查询结果
+     */
+    static async getCampusOne() {
+        //返回最新的一条
+        return await campusSchema.findOne({
+            order: [['create_time', 'DESC']]
+        });
+    }
 }
 
 module.exports = campusModel;

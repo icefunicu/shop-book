@@ -16,7 +16,7 @@ var orderRouter = require("./routes/order");
 var cartRouter = require("./routes/cart");
 var addressRouter = require("./routes/address");
 var messageRouter = require("./routes/message")
-
+var campusRouter = require("./routes/campus");
 const noSessionUrl = ["/user/login", "/user/register", "/getPublicKey", "/getUserList", "/api/getOrder"];
 
 var app = express();
@@ -65,6 +65,7 @@ app.use("/order", orderRouter);
 app.use("/cart", cartRouter);
 app.use("/address", addressRouter);
 app.use("/message", messageRouter);
+app.use("/campus", campusRouter);
 
 //404 handler
 app.use(function (req, res, next) {

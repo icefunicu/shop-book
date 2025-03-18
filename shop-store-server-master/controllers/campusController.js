@@ -121,6 +121,18 @@ class CampusController {
             return res.send(resMsg(500, "获取资讯列表失败", error.message));
         }
     }
+    // 获取最新一条资讯
+    async getCampusOne(req, res) {
+        try {
+            // 调用模型获取最新一条资讯
+            const result = await campusModel.getCampusOne();
+            logger.info(`获取最新一条资讯成功`);
+            return res.send(resMsg(200, result));
+        } catch (error) {
+            logger.error(`获取最新一条资讯失败: ${error.message}`);
+            return res.send(resMsg(500, "获取最新一条资讯失败", error.message));
+        }
+    }
 }
 
 module.exports = new CampusController();
