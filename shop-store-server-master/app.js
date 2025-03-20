@@ -21,7 +21,7 @@ const noSessionUrl = ["/user/login", "/user/register", "/getPublicKey", "/getUse
 
 var app = express();
 
-app.listen(3001);
+app.listen(3000);
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
@@ -35,7 +35,6 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(cors({ credentials: true, origin: ["http://127.0.0.1:8081", "http://localhost:8081"] }));
 app.use(sessionMiddleware);
-
 app.use(async function (req, res, next) {
   let result = await getShopStatusMiddleware();
   if (result[0].status === 1) {

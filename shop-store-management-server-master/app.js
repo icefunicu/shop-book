@@ -19,7 +19,7 @@ const noSessionUrl = ["/admin/login", "/admin/register", "/getPublicKey", "/getU
 
 var app = express();
 
-var io = require("socket.io").listen(app.listen(3000));
+var io = require("socket.io").listen(app.listen(3001));
 io.sockets.use(function (socket, next) {
   sessionMiddleware(socket.request, socket.request.res, next);
 });

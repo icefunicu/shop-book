@@ -1,4 +1,5 @@
 const moment = require("moment");
+const { get } = require("../routes");
 module.exports = function (sequelize, DataTypes) {
     return sequelize.define("campus_information", {
         id: {
@@ -26,22 +27,22 @@ module.exports = function (sequelize, DataTypes) {
         publish_time: {
             type: DataTypes.DATE,
             field: 'publish_time',
+            defaultValue: DataTypes.NOW,
+            get() {
+                return moment(this.getDataValue("publish_time")).format("YYYY-MM-DD HH:mm:ss");
+            },
             comment: '发布时间'
-        },
-        author_id: {
-            type: DataTypes.INTEGER.UNSIGNED,
-            allowNull: false,
-            field: 'author_id',
-            comment: '发布人ID'
         },
         create_time: {
             type: DataTypes.DATE,
+            defaultValue: DataTypes.NOW,
             get() {
                 return moment(this.getDataValue("create_time")).format("YYYY-MM-DD HH:mm:ss");
             }
         },
         update_time: {
             type: DataTypes.DATE,
+            defaultValue: DataTypes.NOW,
             get() {
                 return moment(this.getDataValue("update_time")).format("YYYY-MM-DD HH:mm:ss");
             }

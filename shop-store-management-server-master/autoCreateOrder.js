@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
 });
 connection.connect();
 
-axios.defaults.baseURL = "http://127.0.0.1:3000";
+axios.defaults.baseURL = "http://127.0.0.1:3001";
 
 class autoCreateOrder {
   constructor(option) {

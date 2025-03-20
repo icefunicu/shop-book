@@ -1,7 +1,7 @@
 // 编码
 const ENCODING = "utf-8";
 // 服务器目录
-const SERVER_DIR = "./";
+const SERVER_DIR = "..\\..\\httpd-2.4.63-250207-win64-VS17\\Apache24\\resource";
 // 图书下载模板文件名
 const BOOK_NAME = "批量上传图书.xlsx";
 // 图书下载模板位置 
@@ -21,7 +21,7 @@ const KEEP_EXTENSIONS = true;
 // 最大上传大小
 const MAX_FILESIZE = 1024 * 1024 * 20;
 // 服务器URL
-const SERVER_URL = "http://127.0.0.1:8080";
+const SERVER_URL = "http://127.0.0.1";
 // 图书图片地址
 const BOOK_IMG_URL = "/images/book/";
 // 管理员头像地址
