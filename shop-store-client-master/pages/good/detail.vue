@@ -5,12 +5,10 @@
           class="back-btn">
         <van-icon name="arrow-left"/>
       </div>
-      <van-swipe>
-        <van-swipe-item :key="index"
-            v-for="(item,index) in goodSwipeImg">
-          <img v-lazy="item"/>
-        </van-swipe-item>
-      </van-swipe>
+      <div class="detail"
+          ref="detail">
+        <img :src="goodDetailImg">
+      </div>
       <div class="info">
         <div class="name">{{goodDetail.name}}</div>
         <div class="title">{{goodDetail.title}}</div>
@@ -80,7 +78,9 @@
         let res = await $axios.$post("/book/getBookInfoById", {id: query.id});
         if (res.errorCode === 200) {
           return {
-            goodDetail: res.data || {}
+            goodDetail: res.data || {},
+            goodSwipeImg: res.data.imageUrl || [],
+            goodDetailImg: res.data.imageUrl || []
           };
         } else {
           handleServerError("", error, redirect);
@@ -92,15 +92,8 @@
     data() {
       return {
         count: 1,
-        goodSwipeImg: [
-          this.baseUrl + "/images/shop/good/good-swipe/good-swipe-1.jpg",
-          this.baseUrl + "/images/shop/good/good-swipe/good-swipe-2.jpg",
-          this.baseUrl + "/images/shop/good/good-swipe/good-swipe-3.jpg",
-          this.baseUrl + "/images/shop/good/good-swipe/good-swipe-4.jpg",
-        ],
-        goodDetailImg: [
-          this.baseUrl + "/images/shop/good/good-detail/good-detail-1.jpg"
-        ]
+        goodSwipeImg: [],
+        goodDetailImg: []
       };
     },
     mounted() {

@@ -66,6 +66,8 @@ class adminUserController {
       let repPwd = decodeURI(req.body.repPwd);
       let decryptPwd = rsaKey.decrypt(pwd, "utf8");
       let decryptRepPwd = rsaKey.decrypt(repPwd, "utf8");
+      let usertype = 1;
+      let status = 1;
       if (hasEmpty(name, decryptPwd, decryptRepPwd, nickname) || !mobileReg.test(name) || nickname.length > 20) {
         res.json(resMsg(9001));
         return false;
@@ -82,7 +84,9 @@ class adminUserController {
         await adminUserModel.create({
           nickname: nickname,
           name: name,
-          pwd: decryptPwd
+          pwd: decryptPwd,
+          usertype: usertype,
+          status: status
         });
         res.json(resMsg(200));
       }
