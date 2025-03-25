@@ -1,3 +1,4 @@
+const { where } = require('sequelize');
 const db = require('../config/dbConnect');
 const sequelize = db.sequelize;
 const campusSchema = sequelize.import("../schema/campusSchema");
@@ -53,7 +54,8 @@ class campusModel {
     static async getCampusOne() {
         //返回最新的一条
         return await campusSchema.findOne({
-            order: [['create_time', 'DESC']]
+            order: [['create_time', 'DESC']],
+            where : { status : 1}
         });
     }
 }

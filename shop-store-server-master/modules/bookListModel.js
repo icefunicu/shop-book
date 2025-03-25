@@ -138,7 +138,6 @@ class bookListModel {
    */
   static async getBookInfoByIds(idsArr) {
     return bookListSchema.findAll({
-      attributes: { exclude: ["status", "stockPrice", "createdAt", "updatedAt"] },
       where: {
         id: {
           [Op.in]: idsArr

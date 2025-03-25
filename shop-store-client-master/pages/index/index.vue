@@ -9,8 +9,9 @@
     >
       <div @click="onSearch" slot="action">搜索</div>
     </van-search>
-    <van-notice-bar scrollable>
-      {{ campusData.title }}：{{ campusData.content }}
+    <van-notice-bar scrollable class="notice-bar">
+
+      {{ campusData.title }}  <span v-if="campusData.title !== null && campusData.title !== undefined">：</span> {{ campusData.content }}
     </van-notice-bar>
     <div class="home-swipe">
       <div class="home-swipe-head">
@@ -156,7 +157,7 @@ export default {
           saleGoods: saleData.data || [],
           discoverGoods: discoverData.data || [],
           classifyGoods: classifyGood.data || [],
-          campusData: campusData.data || []
+          campusData: campusData.data || {content: "暂无最新资讯，等待管理员添加"}
         };
       } else {
         handleServerError("", error, redirect);
@@ -244,7 +245,10 @@ export default {
     height 100%
   }
 }
-
+.notice-bar {
+  height 50px
+  font-size 18px
+}
 .home-swipe {
   box-sizing border-box
   padding 4px 6px

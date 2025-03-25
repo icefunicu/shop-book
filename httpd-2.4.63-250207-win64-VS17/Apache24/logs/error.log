@@ -70,3 +70,81 @@ AH00558: httpd.exe: Could not reliably determine the server's fully qualified do
 AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::4c1a:4afe:6269:dd30. Set the 'ServerName' directive globally to suppress this message
 [Fri Mar 21 12:25:28.463049 2025] [ssl:warn] [pid 15124:tid 420] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
 [Fri Mar 21 12:25:28.466049 2025] [mpm_winnt:notice] [pid 15124:tid 420] AH00354: Child: Starting 64 worker threads.
+[Fri Mar 21 23:23:03.996213 2025] [mpm_winnt:notice] [pid 11824:tid 136] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Fri Mar 21 23:23:06.030484 2025] [mpm_winnt:notice] [pid 15124:tid 420] AH00364: Child: All worker threads have exited.
+[Fri Mar 21 23:23:06.046108 2025] [mpm_winnt:notice] [pid 11824:tid 136] AH00430: Parent: Child process 15124 exited successfully.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::b4f6:6db1:adff:efd9. Set the 'ServerName' directive globally to suppress this message
+[Sat Mar 22 11:36:42.490727 2025] [ssl:warn] [pid 11612:tid 432] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Mar 22 11:36:42.491728 2025] [mpm_winnt:notice] [pid 11612:tid 432] AH00455: Apache/2.4.63 (Win64) OpenSSL/3.3.2 configured -- resuming normal operations
+[Sat Mar 22 11:36:42.491728 2025] [mpm_winnt:notice] [pid 11612:tid 432] AH00456: Apache Lounge VS17 Server built: Feb  3 2025 10:10:51
+[Sat Mar 22 11:36:42.491728 2025] [core:notice] [pid 11612:tid 432] AH00094: Command line: 'D:\\School\\Demo_pakge\\Work\\shop-book\\httpd-2.4.63-250207-win64-VS17\\Apache24\\bin\\httpd.exe -d D:/School/Demo_pakge/Work/shop-book/httpd-2.4.63-250207-win64-VS17/Apache24'
+[Sat Mar 22 11:36:42.493747 2025] [mpm_winnt:notice] [pid 11612:tid 432] AH00418: Parent: Created child process 14176
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::b4f6:6db1:adff:efd9. Set the 'ServerName' directive globally to suppress this message
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::b4f6:6db1:adff:efd9. Set the 'ServerName' directive globally to suppress this message
+[Sat Mar 22 11:36:43.071953 2025] [ssl:warn] [pid 14176:tid 420] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Mar 22 11:36:43.074955 2025] [mpm_winnt:notice] [pid 14176:tid 420] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 22 18:16:41.368725 2025] [mpm_winnt:notice] [pid 11612:tid 432] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Mar 22 18:16:43.408996 2025] [mpm_winnt:notice] [pid 14176:tid 420] AH00364: Child: All worker threads have exited.
+[Sat Mar 22 18:16:43.424621 2025] [mpm_winnt:notice] [pid 11612:tid 432] AH00430: Parent: Child process 14176 exited successfully.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::b4f6:6db1:adff:efd9. Set the 'ServerName' directive globally to suppress this message
+[Sat Mar 22 18:17:11.432632 2025] [ssl:warn] [pid 10692:tid 404] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Mar 22 18:17:11.432632 2025] [mpm_winnt:notice] [pid 10692:tid 404] AH00455: Apache/2.4.63 (Win64) OpenSSL/3.3.2 configured -- resuming normal operations
+[Sat Mar 22 18:17:11.432632 2025] [mpm_winnt:notice] [pid 10692:tid 404] AH00456: Apache Lounge VS17 Server built: Feb  3 2025 10:10:51
+[Sat Mar 22 18:17:11.432632 2025] [core:notice] [pid 10692:tid 404] AH00094: Command line: 'D:\\School\\Demo_pakge\\Work\\shop-book\\httpd-2.4.63-250207-win64-VS17\\Apache24\\bin\\httpd.exe -d D:/School/Demo_pakge/Work/shop-book/httpd-2.4.63-250207-win64-VS17/Apache24'
+[Sat Mar 22 18:17:11.434630 2025] [mpm_winnt:notice] [pid 10692:tid 404] AH00418: Parent: Created child process 13520
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::b4f6:6db1:adff:efd9. Set the 'ServerName' directive globally to suppress this message
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::b4f6:6db1:adff:efd9. Set the 'ServerName' directive globally to suppress this message
+[Sat Mar 22 18:17:11.999631 2025] [ssl:warn] [pid 13520:tid 420] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Mar 22 18:17:12.002667 2025] [mpm_winnt:notice] [pid 13520:tid 420] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 22 23:08:15.667528 2025] [mpm_winnt:notice] [pid 10692:tid 404] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Mar 22 23:08:17.706806 2025] [mpm_winnt:notice] [pid 13520:tid 420] AH00364: Child: All worker threads have exited.
+[Sat Mar 22 23:08:17.722431 2025] [mpm_winnt:notice] [pid 10692:tid 404] AH00430: Parent: Child process 13520 exited successfully.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::b4f6:6db1:adff:efd9. Set the 'ServerName' directive globally to suppress this message
+[Sun Mar 23 10:11:03.357457 2025] [ssl:warn] [pid 11820:tid 404] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sun Mar 23 10:11:03.358456 2025] [mpm_winnt:notice] [pid 11820:tid 404] AH00455: Apache/2.4.63 (Win64) OpenSSL/3.3.2 configured -- resuming normal operations
+[Sun Mar 23 10:11:03.358456 2025] [mpm_winnt:notice] [pid 11820:tid 404] AH00456: Apache Lounge VS17 Server built: Feb  3 2025 10:10:51
+[Sun Mar 23 10:11:03.358456 2025] [core:notice] [pid 11820:tid 404] AH00094: Command line: 'D:\\School\\Demo_pakge\\Work\\shop-book\\httpd-2.4.63-250207-win64-VS17\\Apache24\\bin\\httpd.exe -d D:/School/Demo_pakge/Work/shop-book/httpd-2.4.63-250207-win64-VS17/Apache24'
+[Sun Mar 23 10:11:03.360458 2025] [mpm_winnt:notice] [pid 11820:tid 404] AH00418: Parent: Created child process 11712
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::b4f6:6db1:adff:efd9. Set the 'ServerName' directive globally to suppress this message
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::b4f6:6db1:adff:efd9. Set the 'ServerName' directive globally to suppress this message
+[Sun Mar 23 10:11:03.781456 2025] [ssl:warn] [pid 11712:tid 420] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sun Mar 23 10:11:03.783455 2025] [mpm_winnt:notice] [pid 11712:tid 420] AH00354: Child: Starting 64 worker threads.
+[Sun Mar 23 20:49:14.205794 2025] [mpm_winnt:notice] [pid 11820:tid 404] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sun Mar 23 20:49:16.226435 2025] [mpm_winnt:notice] [pid 11712:tid 420] AH00364: Child: All worker threads have exited.
+[Sun Mar 23 20:49:16.242060 2025] [mpm_winnt:notice] [pid 11820:tid 404] AH00430: Parent: Child process 11712 exited successfully.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::b9b5:e8ea:cdd8:6e00. Set the 'ServerName' directive globally to suppress this message
+[Sun Mar 23 20:49:45.811068 2025] [ssl:warn] [pid 9848:tid 292] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sun Mar 23 20:49:45.811068 2025] [mpm_winnt:notice] [pid 9848:tid 292] AH00455: Apache/2.4.63 (Win64) OpenSSL/3.3.2 configured -- resuming normal operations
+[Sun Mar 23 20:49:45.811068 2025] [mpm_winnt:notice] [pid 9848:tid 292] AH00456: Apache Lounge VS17 Server built: Feb  3 2025 10:10:51
+[Sun Mar 23 20:49:45.811068 2025] [core:notice] [pid 9848:tid 292] AH00094: Command line: 'D:\\School\\Demo_pakge\\Work\\shop-book\\httpd-2.4.63-250207-win64-VS17\\Apache24\\bin\\httpd.exe -d D:/School/Demo_pakge/Work/shop-book/httpd-2.4.63-250207-win64-VS17/Apache24'
+[Sun Mar 23 20:49:45.813068 2025] [mpm_winnt:notice] [pid 9848:tid 292] AH00418: Parent: Created child process 14392
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::b9b5:e8ea:cdd8:6e00. Set the 'ServerName' directive globally to suppress this message
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::b9b5:e8ea:cdd8:6e00. Set the 'ServerName' directive globally to suppress this message
+[Sun Mar 23 20:49:47.983296 2025] [ssl:warn] [pid 14392:tid 420] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sun Mar 23 20:49:47.986297 2025] [mpm_winnt:notice] [pid 14392:tid 420] AH00354: Child: Starting 64 worker threads.
+[Sun Mar 23 23:22:32.394653 2025] [mpm_winnt:notice] [pid 9848:tid 292] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sun Mar 23 23:22:34.441528 2025] [mpm_winnt:notice] [pid 14392:tid 420] AH00364: Child: All worker threads have exited.
+[Sun Mar 23 23:22:34.457153 2025] [mpm_winnt:notice] [pid 9848:tid 292] AH00430: Parent: Child process 14392 exited successfully.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::b4f6:6db1:adff:efd9. Set the 'ServerName' directive globally to suppress this message
+[Mon Mar 24 10:58:38.583722 2025] [ssl:warn] [pid 11532:tid 408] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Mon Mar 24 10:58:38.584723 2025] [mpm_winnt:notice] [pid 11532:tid 408] AH00455: Apache/2.4.63 (Win64) OpenSSL/3.3.2 configured -- resuming normal operations
+[Mon Mar 24 10:58:38.585230 2025] [mpm_winnt:notice] [pid 11532:tid 408] AH00456: Apache Lounge VS17 Server built: Feb  3 2025 10:10:51
+[Mon Mar 24 10:58:38.585230 2025] [core:notice] [pid 11532:tid 408] AH00094: Command line: 'D:\\School\\Demo_pakge\\Work\\shop-book\\httpd-2.4.63-250207-win64-VS17\\Apache24\\bin\\httpd.exe -d D:/School/Demo_pakge/Work/shop-book/httpd-2.4.63-250207-win64-VS17/Apache24'
+[Mon Mar 24 10:58:38.586238 2025] [mpm_winnt:notice] [pid 11532:tid 408] AH00418: Parent: Created child process 14084
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::b4f6:6db1:adff:efd9. Set the 'ServerName' directive globally to suppress this message
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::b4f6:6db1:adff:efd9. Set the 'ServerName' directive globally to suppress this message
+[Mon Mar 24 10:58:39.121894 2025] [ssl:warn] [pid 14084:tid 424] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Mon Mar 24 10:58:39.124894 2025] [mpm_winnt:notice] [pid 14084:tid 424] AH00354: Child: Starting 64 worker threads.
+[Mon Mar 24 22:26:44.328281 2025] [mpm_winnt:notice] [pid 11532:tid 408] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Mon Mar 24 22:26:46.370792 2025] [mpm_winnt:notice] [pid 14084:tid 424] AH00364: Child: All worker threads have exited.
+[Mon Mar 24 22:26:46.386418 2025] [mpm_winnt:notice] [pid 11532:tid 408] AH00430: Parent: Child process 14084 exited successfully.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::b4f6:6db1:adff:efd9. Set the 'ServerName' directive globally to suppress this message
+[Tue Mar 25 08:41:40.104028 2025] [ssl:warn] [pid 8956:tid 404] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Mar 25 08:41:40.105044 2025] [mpm_winnt:notice] [pid 8956:tid 404] AH00455: Apache/2.4.63 (Win64) OpenSSL/3.3.2 configured -- resuming normal operations
+[Tue Mar 25 08:41:40.105044 2025] [mpm_winnt:notice] [pid 8956:tid 404] AH00456: Apache Lounge VS17 Server built: Feb  3 2025 10:10:51
+[Tue Mar 25 08:41:40.105044 2025] [core:notice] [pid 8956:tid 404] AH00094: Command line: 'D:\\School\\Demo_pakge\\Work\\shop-book\\httpd-2.4.63-250207-win64-VS17\\Apache24\\bin\\httpd.exe -d D:/School/Demo_pakge/Work/shop-book/httpd-2.4.63-250207-win64-VS17/Apache24'
+[Tue Mar 25 08:41:40.106842 2025] [mpm_winnt:notice] [pid 8956:tid 404] AH00418: Parent: Created child process 13384
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::b4f6:6db1:adff:efd9. Set the 'ServerName' directive globally to suppress this message
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::b4f6:6db1:adff:efd9. Set the 'ServerName' directive globally to suppress this message
+[Tue Mar 25 08:41:40.730886 2025] [ssl:warn] [pid 13384:tid 424] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Mar 25 08:41:40.733885 2025] [mpm_winnt:notice] [pid 13384:tid 424] AH00354: Child: Starting 64 worker threads.

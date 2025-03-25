@@ -31,6 +31,12 @@
           />
         </van-cell>
       </van-cell-group>
+      <!-- 库存 -->
+      <van-cell-group>
+        <van-cell title="库存">
+          剩余  <span style="color: black">{{stock}}</span>  件
+        </van-cell>
+      </van-cell-group>
 
       <van-cell-group>
         <van-cell is-link title="作者">
@@ -80,7 +86,8 @@
           return {
             goodDetail: res.data || {},
             goodSwipeImg: res.data.imageUrl || [],
-            goodDetailImg: res.data.imageUrl || []
+            goodDetailImg: res.data.imageUrl || [],
+            stock: res.data.stock
           };
         } else {
           handleServerError("", error, redirect);
@@ -93,7 +100,8 @@
       return {
         count: 1,
         goodSwipeImg: [],
-        goodDetailImg: []
+        goodDetailImg: [],
+        stock: 0  //库存
       };
     },
     mounted() {

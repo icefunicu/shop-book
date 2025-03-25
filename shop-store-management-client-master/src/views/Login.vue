@@ -264,13 +264,14 @@ export default {
       border-radius 12px
       box-shadow 0 10px 30px rgba(0, 0, 0, 0.1)
       overflow hidden
+      height 580px
 
       .main-bg
         flex 1
         min-height 500px
-        background-image url('/images/login/login-bg-2.jpg')
+        background-image url("../assets/bg.png")
         background-repeat no-repeat
-        background-size cover
+        background-size cover 
         background-position center
         position relative
 

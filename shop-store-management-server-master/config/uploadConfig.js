@@ -1,7 +1,7 @@
 // 编码
 const ENCODING = "utf-8";
 // 服务器目录
-const SERVER_DIR = "..\\..\\httpd-2.4.63-250207-win64-VS17\\Apache24\\resource";
+const SERVER_DIR = "..\\httpd-2.4.63-250207-win64-VS17\\Apache24\\resource";
 // 图书下载模板文件名
 const BOOK_NAME = "批量上传图书.xlsx";
 // 图书下载模板位置 
